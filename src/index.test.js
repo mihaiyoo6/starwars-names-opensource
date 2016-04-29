@@ -18,14 +18,14 @@ describe('starwars-names', function(){
 		});
 	});
 
-	describe('random', function(){
+	describe('randomName', function(){
 		it('should return a random item from the startWars all', function(){
-			var randomItem = startWars.random();
+			var randomItem = startWars.randomName();
 			expect(startWars.all).to.include(randomItem);
 		});
 
 		it('should return an array of random item if passed a number', function(){
-			var randomItems = startWars.random(3);
+			var randomItems = startWars.randomName(3);
 			expect(randomItems).to.have.length(3);
 			randomItems.forEach(function(item){
 				expect(startWars.all).to.include(item);
